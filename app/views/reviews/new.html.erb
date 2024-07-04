@@ -1,0 +1,12 @@
+<div class="col-md-5 m-auto">
+  <h3>New Review</h3>
+  <%= simple_form_for([@restaurant, @review]) do |f| %>
+    <div class="form-group">
+      <%= f.input :content, :input_html => { class: 'form-control mb-3' } %>
+      <%= f.input :rating, :input_html => { class: 'form-control mb-3', min: '0', max: '5' } %>
+      <%= f.button :submit, class: "btn btn-primary"%>
+    </div>
+  <% end %>
+  <hr>
+  <%= link_to "Back to #{@restaurant.name}'s Reviews", restaurant_reviews_path(@restaurant), class: "text-decoration-none" %>
+</div>

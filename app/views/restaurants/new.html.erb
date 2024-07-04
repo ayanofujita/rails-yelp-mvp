@@ -1,0 +1,14 @@
+<div class="col-md-5 m-auto">
+  <h3>New Restaurant</h3>
+  <%= simple_form_for(@restaurant) do |f| %>
+    <div class="form-group">
+      <%= f.input :name, :input_html => { class:'form-control mb-3' } %>
+      <%= f.input :category, as: :select, collection: Restaurant::CATEGORIES, :input_html => { class: 'form-control mb-3' } %>
+      <%= f.input :address, :input_html => { class: 'form-control mb-3' } %>
+      <%= f.input :phone_number, :input_html => { class: 'form-control mb-3' } %>
+      <%= f.button :submit, class: "btn btn-primary"%>
+    </div>
+  <% end %>
+  <hr>
+  <%= link_to "Back to Restaurants", restaurants_path, class: "text-decoration-none" %>
+</div>

@@ -1,0 +1,10 @@
+<div class="col-md-5 m-auto">
+  <h3><%= @restaurant.name %></h3>
+  <p><%= @restaurant.category %></p>
+  <p><%= @restaurant.address %></p>
+  <p><%= @restaurant.phone_number %></p>
+
+  <hr>
+
+  <%= link_to "Reviews", restaurant_reviews_path(@restaurant) %>
+</div>

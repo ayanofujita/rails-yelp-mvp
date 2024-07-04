@@ -1,0 +1,15 @@
+<h3>Restaurants</h3>
+<div class="d-flex flex-wrap justify-content-even">
+  <% @restaurants.each do |restaurant| %>
+    <div class="card m-2" style="width: 18rem;">
+      <div class="card-body bg-light">
+        <h5 class="card-title"><%= restaurant.name %></h5>
+        <p class="card-text text-secondary"><em><%= restaurant.category.capitalize %></em></p>
+        <p><%= restaurant.address %></p>
+      </div>
+      <div class="card-body bg-white">
+          <%= link_to "More info", restaurant_path(restaurant) %>
+      </div>
+    </div>
+  <% end %>
+</div>
